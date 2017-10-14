@@ -15,7 +15,7 @@ class Crypto {
         	8=>"xzc"
         	);
     }
-    
+
 
     function exec_get($fullurl)
     {
@@ -41,8 +41,7 @@ class Crypto {
 
     public function getCryptoInfo($cryptoIndex) 
     {
-    	$cryptoId=this->cryptoList[$cryptoIndex];
-
+    	$cryptoId=$this->cryptoList[$cryptoIndex];
         $fullUrl = $this->urlPrefix.$cryptoId.'_idr/'.$this->urlSuffix;
         $result = json_decode($this->exec_get($fullUrl), true);
         $result['cryptoId']=$cryptoId;
