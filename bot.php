@@ -61,6 +61,7 @@ if($message['type']=='text')
 				$cryptoPrice= $cryptodata['ticker']['last'];
 				$cryptoid = strtolower($cryptoData['cryptoid']);
 				$cryptoVolume=$cryptodata['ticker']['vol_'.$cryptoId];
+				error_log($cryptoVolume);
 				$replyText = '1 '.strtoupper($cryptoId).' = '.'Rp.'.$crypto->generateIDRString($cryptoPrice).' Volume:'.$crypto->generateIDRString($cryptoVolume);
 
 			}
