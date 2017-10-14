@@ -60,7 +60,7 @@ class Crypto {
         {
             return true;
         }
-        return_false
+        return false;
     }
 
     public function generateIDRString($price) {
