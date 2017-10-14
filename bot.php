@@ -59,7 +59,7 @@ if($message['type']=='text')
 
 				$cryptodata = $crypto->getCryptoInfo($incomingMsg);
 				$cryptoPrice= $cryptodata['ticker']['last'];
-				$cryptoid = strtolower($cryptoData['cryptoid']);
+				$cryptoid = strtolower($cryptoData['cryptoId']);
 				$stringVol = 'vol_'.$cryptoId;
 				$cryptoVolume=$cryptodata['ticker'][$stringVol];
 				error_log("vol : ".$cryptoVolume);
