@@ -57,8 +57,8 @@ if($message['type']=='text')
 			if($crypto->checkCryptoId($incomingMsg))
 			{
 
-				$cryptodata = $crypto->getCryptoInfo($incomingMsg)
-				$cryptoPrice= $cryptodata['ticker']['last']
+				$cryptodata = $crypto->getCryptoInfo($incomingMsg);
+				$cryptoPrice= $cryptodata['ticker']['last'];
 				$cryptoid = strtolower($cryptoData['cryptoid']);
 				$cryptoVolume=$cryptodata['ticker']['vol_'.$cryptoId];
 				$replyText = '1 '.strtoupper($cryptoId).' = '.'Rp.'.$crypto->generateIDRString($cryptoPrice).' Volume:'.$crypto->generateIDRString($cryptoVolume);
